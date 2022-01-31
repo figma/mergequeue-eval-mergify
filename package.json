@@ -1,0 +1,23 @@
+{
+  "name": "mergequeue-eval-mergequeue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figma/mergequeue-eval-mergequeue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/figma/mergequeue-eval-mergequeue/issues"
+  },
+  "homepage": "https://github.com/figma/mergequeue-eval-mergequeue#readme",
+  "dependencies": {
+    "yaml": "^1.10.2"
+  }
+}
