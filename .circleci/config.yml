@@ -8,7 +8,5 @@ jobs:
       tag: '14.18.2'
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
+      - node/install-packages
       - run: npm run test
