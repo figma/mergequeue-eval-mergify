@@ -13,10 +13,12 @@ async function main() {
 
   let shouldFail = false;
   if (config.fail_if) {
-    if (config[config.fail_if]) {
+    if (fs.existsSync(path.resolve(`flags/${config.fail_if}`))) {
+      console.log(`Failing due to presence of ${config.fail_if} flag`);
       shouldFail = true;
     }
   } else if (config.fail) {
+    console.log(`Failing due to fail: true`);
     shouldFail = true;
   }
 
