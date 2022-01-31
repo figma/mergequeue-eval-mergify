@@ -11,9 +11,19 @@ async function main() {
   console.log(`Sleeping for ${durationMs} milliseconds`);
   await sleep(durationMs);
 
-  if (config.fail) {
+  let shouldFail = false;
+  if (config.fail_if) {
+    if (config[config.fail_if]) {
+      shouldFail = true;
+    }
+  } else if (config.fail) {
+    shouldFail = true;
+  }
+
+  if (shouldFail) {
     throw new Error(`A test failure was induced!`);
   }
+
   console.log(`Success.`);
 }
 
