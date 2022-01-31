@@ -1,0 +1,15 @@
+pull_request_rules:
+  - name: Enqueue on label:ready-to-merge
+    conditions:
+      - label=ready
+      - base=main
+      - "check-success=ci/circleci: build"
+    actions:
+      queue:
+        name: default
+        method: squash
+queue_rules:
+  - name: default
+    conditions:
+      - "check-success=ci/circleci: build"
+  
