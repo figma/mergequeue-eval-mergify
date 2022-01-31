@@ -1,7 +1,7 @@
 pull_request_rules:
   - name: Enqueue on label:ready-to-merge
     conditions:
-      - label=ready
+      - label=ready-to-merge
       - base=main
       - "check-success=ci/circleci: build"
     actions:
