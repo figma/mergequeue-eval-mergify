@@ -3,6 +3,7 @@ orbs:
   node: circleci/node@5.0.0
 jobs:
   build:
+    resource_class: small
     executor:
       name: node/default
       tag: '14.18.2'
