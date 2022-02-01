@@ -17,7 +17,8 @@ async function main() {
       console.log(`Failing due to presence of ${config.fail_if} flag`);
       shouldFail = true;
     }
-  } else if (config.fail) {
+  }
+  if (config.fail) {
     console.log(`Failing due to fail: true`);
     shouldFail = true;
   }
