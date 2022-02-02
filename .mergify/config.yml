@@ -10,7 +10,8 @@ pull_request_rules:
         method: squash
 queue_rules:
   - name: default
-    speculative_checks: 3
+    speculative_checks: 2
+    batch_size: 2
     conditions:
       - "check-success=ci/circleci: build"
   
