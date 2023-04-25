@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/figma/mergequeue-eval-mergequeue#readme",
   "dependencies": {
-    "yaml": "^1.10.2"
+    "yaml": "^2.2.2"
   }
 }
